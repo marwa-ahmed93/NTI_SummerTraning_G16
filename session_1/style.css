@@ -1,0 +1,53 @@
+
+h1{
+    background-color: teal;
+    color: chartreuse;
+}
+/* h1{
+    background-color: blue;
+} */
+
+
+/* h2{
+    color: mediumaquamarine;
+} */
+
+.item{
+    text-align: center;
+    color: teal;
+}
+
+.bg{
+    background-color: blanchedalmond;
+}
+.bgr{
+    background-color:red ;
+}
+
+/***********************************************/
+/*     Default value
+
+background-color: transparent;
+width: 100%;
+text-align: start;  en left=>right  ar right=>left
+color: black;
+height: auto;
+*/
+
+
+
+.item2{
+background-color: royalblue;
+width: 35%;
+text-align: center;
+color: wheat;
+/* margin: auto; */
+
+}
+.item2 button{
+    background-color: transparent;
+    color: wheat;
+    padding: 5px 10px; 
+    border: 3px solid red;
+    border-radius: 5px;
+}

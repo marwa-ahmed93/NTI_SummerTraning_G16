@@ -1,0 +1,336 @@
+<html>
+  <head> </head>
+  <body>
+    <!------- heading ------------>
+    <h1 style="color: teal; text-align: center;">Web Design and Development</h1>
+    <a href="about.html">About</a>
+
+    <h2>Web Design</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur <br />
+      adipisicing elit. Voluptatibus, voluptatem!
+    </p>
+
+    <hr />
+
+    <h2>Web Development</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus,
+      voluptatem!
+    </p>
+
+    <!-- <h2>Web Design &&  Development </h2>
+<h3>Web Design &&  Development </h3>
+<h4>Web Design &&  Development </h4>
+<h5>Web Design &&  Development </h5>
+<h6>Web Design &&  Development </h6> -->
+
+    <!--------------------------------------------tag type  -------------------------------------------------->
+    <!--    
+1-nested  tag
+2-empty tag   <hr>   <br>   <img>   attribute 
+
+-->
+
+    <a
+      target="_blank"
+      href="https://ar.wikipedia.org/wiki/%D8%A3%D8%AD%D9%85%D8%AF_%D8%B2%D9%88%D9%8A%D9%84"
+    >
+      <img src="img/images.jpeg" alt="dr/ahmed zewail" width="400" />
+    </a>
+
+    <hr />
+    <!-- <img src="img/Google_Icons-09-512.webp"  alt="Google icon"> -->
+
+    <!--------------------------  list --------------------------------------------------->
+    <!--     
+1-ul
+2-ol
+3-dl     
+-->
+
+    <ul type="square">
+      <li>HTML</li>
+      <li>
+        CSS
+        <ul>
+          <li>Spacing</li>
+          <li>border</li>
+          <li>flexbox</li>
+          <li>color</li>
+        </ul>
+      </li>
+      <li>JS</li>
+      <li>PHP</li>
+    </ul>
+
+    <hr />
+
+    <ol type="a" start="3">
+      <li>PHP</li>
+      <li>
+        DB
+        <ol>
+          <li>Insert</li>
+          <li>Update</li>
+          <li>Delete</li>
+          <li>Select</li>
+        </ol>
+      </li>
+      <li>OOP</li>
+      <li>MVC</li>
+      <li>Laravel</li>
+    </ol>
+
+    <hr />
+
+    <dl>
+      <dt>HTML</dt>
+      <dd>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores hic
+        minus esse fugiat impedit aliquam?
+      </dd>
+    </dl>
+
+    <hr />
+    <hr />
+<!-------------------------------table---------------------------------------->
+    <table border="5">
+        
+
+<thead style="color: blue;">
+    <th colspan="2">name</th>
+   
+    <th>gender</th>
+    <th>title</th>
+</thead>
+
+<tbody style="color: rgb(243, 235, 235); background-color: rgb(141, 93, 31); text-align: center;">
+
+
+          <tr>
+        <td>ahmed</td>
+        <td>20</td>
+        <td rowspan="3">male</td>
+        <td rowspan="2">doctor</td>
+      </tr>
+
+      <tr>
+        <td>malik</td>
+        <td>25</td>
+       
+    
+      </tr>
+
+      <tr>
+        <td>nour</td>
+        <td>20</td>
+      
+        <td>engineer</td>
+      </tr>
+</tbody>
+    </table>
+
+
+
+
+
+
+
+
+<hr>
+<!--------------------------  Style attribute ----------------------------------------------------->
+
+<!----------------   color ---------------------------------------------------------------->
+
+<!-- 
+1-red green 
+
+2- R      G         B
+   00    00        00     =>black
+   ff    ff        ff     => white
+
+   hexadecimal   =>16 0123456789abcdef
+   ff   00    00  =>red         #f00 
+   00    ff    00  => green     #0f0
+   00    00    ff  => blue      #00f
+-->
+
+
+<p style="text-align: center; background-color: #7fa0f8;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, ipsa.</p>
+
+
+
+
+<!----------------------------------------- FORM  --------------------------------------------------------->
+
+
+<!--  
+
+int x  = 5 ;
+
+type    int
+name    x 
+value    5
+
+-->
+
+<hr>
+<hr>
+
+<form>
+
+<label for="">Name:</label>
+<input type="text" name="username" required placeholder="enter name"><span style="color: #f00;">*</span>
+
+
+ <br>
+ <br>
+
+<label for="">email:</label>
+<input type="email" name="email">
+
+
+ <br>
+ <br>
+
+<label for="">password:</label>
+<input type="password" name="password">
+
+
+ <br>
+ <br>
+
+<label for="">birthdate:</label>
+<input type="date" name="date">
+
+
+
+<br>
+ <br>
+
+<label for="">age:</label>
+<input type="number" name="age">
+
+
+<br>
+ <br>
+
+<label for="">color:</label>
+<input type="color" name="color">
+
+
+
+
+<br>
+ <br>
+
+<label for="">upload:</label>
+<input type="file" name="file">
+
+
+
+<br>
+ <br>
+
+ <input type="radio" name="gender" value="male"><label for="">Male</label>
+ <input type="radio" name="gender" value="female"><label for="">Female</label>
+
+
+
+ <br>
+ <br>
+
+ <input type="checkbox" name="skills" value="html"><label for="">html</label>
+ <input type="checkbox" name="skills" value="css"><label for="">css</label>
+ <input type="checkbox" name="skills" value="js"><label for="">js</label>
+ <input type="checkbox" name="skills" value="bootstrap"><label for="">bootstrap</label>
+ <input type="checkbox" name="skills" value="php"><label for="">php</label>
+
+
+ <br>
+ <br>
+ 
+ <select name="country" id="">
+    <option value="cairo">Egypt</option>
+    <option value="india">india</option>
+    <option value="malaysia">malaysia</option>
+    <option value="bankouk">bankouk</option>
+ </select>
+
+
+  <br>
+ <br>
+
+
+ <textarea cols="50" rows="10" name="fedb" id=""></textarea>
+
+
+
+
+
+
+    <br>
+    <br>
+    <button type="submit">ok</button>
+
+</form>
+
+
+
+<hr>
+<hr>
+
+
+<!-------------------------- Media  ------------------------------------------------------------------->
+<!-- 
+1-audio
+2-video
+3-iframe
+-->
+
+
+<audio controls muted autoplay loop>
+    <source src="img/001.mp3">
+</audio>
+
+
+<video width="350" controls autoplay loop muted>
+    <source src="img/WhatsApp Video 2024-05-04 at 6.33.40 PM.mp4">
+</video>
+
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p3Mnum1oPfU?si=aNKYho6OH1UB6o36" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.0331721212433!2d31.33139472564268!3d30.06458361761831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583e42e4f61a9d%3A0xb87f86d33b2fae3c!2sIT%20Gate%20Academy!5e0!3m2!1sar!2seg!4v1788084041082!5m2!1sar!2seg"
+ width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+ referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
+
+
+
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27473.956820007144!2d31.530166594286644!3d30.598863250349996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7f11df48a84e5%3A0xa501720cbe242d27!2z2YXYs9iq2LTZgdmKINin2YTYqtmK2LPZitixINin2YTYr9mI2YTZig!5e0!3m2!1sar!2seg!4v1788084130784!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen=""
+  loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
