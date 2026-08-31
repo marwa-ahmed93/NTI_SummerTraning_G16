@@ -9,7 +9,7 @@ background img   size reapate position attatchment-fixed
 floating
   
 
---Box-sizing
+--Box-sizing    => serching
 --media query   RWD
   600> xs
   600 >sm> 768
@@ -17,11 +17,11 @@ floating
   992> lg >1200
        xl>1200
 
---position
+--position      => serching
 
 --------------------3---------------------------
 
-overflow  =>visible  & hidden & scroll & auto
+overflow  =>visible  & hidden & scroll & auto     => serching   
 --collapse margin
 
 --hidden element
