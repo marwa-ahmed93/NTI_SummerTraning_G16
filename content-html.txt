@@ -1,0 +1,50 @@
+------------------------------------session_2----------------------------------------
+ 
+border
+fonts =>vector
+
+spacing => margin&&pading
+
+background img   size reapate position attatchment-fixed
+floating
+  
+
+--Box-sizing
+--media query   RWD
+  600> xs
+  600 >sm> 768
+  768> md >992
+  992> lg >1200
+       xl>1200
+
+--position
+
+--------------------3---------------------------
+
+overflow  =>visible  & hidden & scroll & auto
+--collapse margin
+
+--hidden element
+ display:none
+ visbilty: visible , hidden 
+ opacity:0 , 1
+ rgba()
+
+--hover
+--trnasition
+  porbirty
+  duration
+  delay
+  timer-function the art of web 
+--impotrant!
+--id
+--calc()
+--scroll smooth  scroll-behavior:smoth
+
+--transform
+    rotate(45deg)  , rotateX() , rotateY()
+    translate(0px , 12px)
+    scale(2,2)  , scaleX()  , scaleY()
+    skewX()  ,  skewY()
+
+--flex-box
