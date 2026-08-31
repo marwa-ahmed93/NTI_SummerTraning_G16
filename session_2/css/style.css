@@ -1,0 +1,189 @@
+/* body{
+    background-color: #d33f3f;
+} */
+
+/* .container{
+    background-color: lightgray;
+    width: 25%;
+    text-align: center;
+    color: bisque;
+
+
+ 
+}
+
+.p{
+ background-color: yellow;
+
+} */
+
+/****************************************************************************/
+/* display:inline     
+   display:block 
+
+   display:inline-block  white spacing
+*/
+/* 
+a{
+    display: block;
+    background-color: red;
+    width: 15%;
+    height: 30px;
+}
+p{
+    display: inline-block;   
+    background-color: blue;
+    width: 24%;
+    margin: 0;
+} */
+
+/* h1{
+    text-align: center;
+}
+h1 span{
+    color: teal;
+    font-size: 40px;
+} */
+.items {
+  /* background-color: tomato; */
+}
+.item {
+  /* background-color: gray; */
+  /* width: 33%;
+    text-align: center;
+    display: inline-block; */
+}
+/* .item img{
+    width: 90%;
+} */
+
+/***************************************************************/
+/*border
+
+1-width
+2-color
+3-style
+
+*/
+
+.bord {
+  /* background-color: teal; */
+  width: 300px;
+  height: 300px;
+
+  /* border-width: 10px;
+    border-color: red;
+    border-style: dotted; */
+
+  border: 10px solid red;
+  /* border-top: 0; */
+  /* border-left: 12px solid green;
+    border-right: 12px solid green;
+    border-bottom: 12px solid red; */
+
+  /* border-radius: 50%; */
+
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+  /* border-bottom-right-radius: 50%; */
+}
+
+/*********************************************************/
+/*Fonts 
+1-font-size:16px  vector   100% => 16px
+2- font-weight: 400;
+3- font-style: normal; 
+*/
+
+@font-face {
+  font-family: AsapSharp;
+  src: url(../AsapSharp-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+.p-font {
+  font-size: 100%;
+  font-weight: 400;
+  font-style: normal;
+
+  font-family: "Roboto Mono", monospace;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+.font-fh2 {
+  text-align: center;
+  /* font-family: "DM Sans", sans-serif; */
+  font-family: AsapSharp;
+}
+
+/* .img{
+    background-color: aquamarine;
+    width: 30%;
+}
+.img img{
+width: 100%;
+} */
+
+/**************************************************************/
+/*
+spacing
+1-margin      top    right   bottom  left  
+
+
+2-padding
+*/
+.space {
+  background-color: red;
+  width: 300px;
+  height: 300px;
+
+  /* margin-top: 100px;
+margin-left: 100px;
+margin-right: 100px;
+margin-bottom: 100px; */
+
+  margin: 50px auto;
+  /* padding-top: 20px;
+padding-left: 20px;
+padding-right: 20px;
+padding-bottom: 20px; */
+
+  padding: 20px;
+  text-align: center;
+}
+
+/***************************************************************************************/
+/*  background
+background-size: 100%  100%;   or cover
+ */
+
+.back {
+  width: 700px;
+  height: 900px;
+  border: 3px solid teal;
+
+  background-image: url(../images/bgs.jpg);
+  background-size: cover;
+
+  background-position: center center;
+
+  background-attachment: fixed;
+
+  color: #00f;
+  font-size: 20px;
+  /* background-color: aqua; */
+  /* background-image: url(../images/images.jpg) , url(../images/taxi.png);
+background-repeat: repeat-x , no-repeat;
+background-position: 1px 1px ,  center center;
+
+background-color: antiquewhite; */
+}
+
+/* .test{
+    background-color: blue;
+    width: 30%;
+ }
+ .test p{
+    padding: 20px;
+    background-color: tomato;
+    width: 50%;
+ } */
