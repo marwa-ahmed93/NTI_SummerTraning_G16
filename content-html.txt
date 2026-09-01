@@ -1,0 +1,94 @@
+
+HTML 
+tags => <html>
+head && body 
+h1-h6  => pascal van
+tags type 
+img tag => src alt
+ <a> => anchor tag  taget _blank
+list => ol ul dl
+table
+style ttribute
+color =>RGB hexa decimal =>16
+comments
+lorem
+formating alt shift f
+forms
+index page
+forms
+ <b> <u> <sup> <sub> <mark> <del> <i>
+media => video audio ifram
+   
+
+---------------------------------------
+css               session_1
+classes
+div =>csswinner.com
+defaults value 
+ -color-background-width-height 
+
+   <div class="parent">
+      <div class="chiled">  =>w50%
+         
+       </div>
+  </div>
+
+task
+our team
+img
+h2
+p
+button
+
+inline&block
+
+------------------------------------session_2----------------------------------------
+ 
+border
+fonts =>vector
+
+spacing => margin&&pading
+
+background img   size reapate position attatchment-fixed
+floating
+  
+
+--Box-sizing    => serching
+--media query   RWD
+  600> xs
+  600 >sm> 768
+  768> md >992
+  992> lg >1200
+       xl>1200
+
+--position      => serching
+
+--------------------3---------------------------
+
+overflow  =>visible  & hidden & scroll & auto     => serching   
+--collapse margin
+
+--hidden element
+ display:none
+ visbilty: visible , hidden 
+ opacity:0 , 1
+ rgba()
+
+--hover
+--trnasition
+  porbirty
+  duration
+  delay
+  timer-function the art of web 
+--impotrant!
+--id
+--calc()
+--scroll smooth  scroll-behavior:smoth
+
+--transform
+    rotate(45deg)  , rotateX() , rotateY()
+    translate(0px , 12px)
+    scale(2,2)  , scaleX()  , scaleY()
+    skewX()  ,  skewY()
+
+--flex-box
