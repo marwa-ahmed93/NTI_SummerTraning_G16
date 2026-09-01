@@ -1,3 +1,47 @@
+
+HTML 
+tags => <html>
+head && body 
+h1-h6  => pascal van
+tags type 
+img tag => src alt
+ <a> => anchor tag  taget _blank
+list => ol ul dl
+table
+style ttribute
+color =>RGB hexa decimal =>16
+comments
+lorem
+formating alt shift f
+forms
+index page
+forms
+ <b> <u> <sup> <sub> <mark> <del> <i>
+media => video audio ifram
+   
+
+---------------------------------------
+css               session_1
+classes
+div =>csswinner.com
+defaults value 
+ -color-background-width-height 
+
+   <div class="parent">
+      <div class="chiled">  =>w50%
+         
+       </div>
+  </div>
+
+task
+our team
+img
+h2
+p
+button
+
+inline&block
+
 ------------------------------------session_2----------------------------------------
  
 border
