@@ -1,0 +1,342 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+/*************************************************************/
+/*transition
+1-transition-property: 
+2-transition-duration:
+3-transition-delay:
+
+*/
+
+.hov{
+    /* width: 200px;
+    height: 200px;
+    background-color: blue !important; */
+    /* transition-property: background-color , width;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(.1,.49,.86,.39);
+ */
+
+
+ /* transition: all 2s ; */
+}
+
+.hov:hover{
+    /* background-color: red;
+    border-radius: 50% ;
+    width: 300px; */
+
+}
+
+
+
+/*************************************************************/
+/*transform
+1-transform:rotate(deg)
+2-transform:translate(x,y)
+3-transform:scale(x,y)
+*/
+
+.hov{
+    width: 200px;
+    height: 200px;
+    background-color: blue ;
+    margin:  50px auto;
+    transition: transform 2s;
+
+}
+.hov:hover{
+    /* transform: translateX(200px); */
+    /* transform: translateY(200px); */
+    /* transform: translate(200px,200px); */
+    /* transform: rotateY(180deg); */
+    /* transform: scale(0.7 , 0.7); */
+    /* transform: skew(20deg,20deg); */
+    
+transform: rotate(45deg) translate(200px,200px) scale(0.7 , 0.7) skew(20deg,20deg) ;
+}
+
+
+
+.trans{
+    width: 500px;
+    height: 400px;
+    background-color: tomato;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+}
+.trans img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5;
+}
+.inner{
+    background-color: rgba(0,0,0,0.3);
+     color: aliceblue;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all .5s;
+}
+.trans:hover .inner{
+     opacity: 1;
+}
+.trans:hover  img{
+    transform: scale(1.2);
+}
+
+
+
+/***********************************************************/
+/*
+1-px   position
+2-%   width   position
+3-vh   height     header
+4-rem  => font size html tag => 16px   padding border margin
+5-em  => font size parent
+*/
+.item{
+    /* width: 20rem;   /*  1rem => 20px     10*20 */
+    /* height: 300px;
+    background-color: blue;
+    margin: 30px;
+    padding: 12px;
+    border-radius: 10px; */ 
+}
+.c-item{
+    /* width: 10rem;
+    height: 5rem;
+    background-color: rgb(203, 216, 19);
+    padding: inherit;
+    margin: inherit;
+    border-radius: inherit; */
+}
+html{
+    /* font-size: 20px;   1rem => 20px */
+}
+
+
+
+
+/*****************************************************************/
+/*
+
+Types of CSS Combinators
+descendant selector (space)
+child selector (>)
+adjacent sibling selector (+)
+general sibling selector (~)
+
+**/
+
+.item > p{
+    font-size: 20px;
+    color: tomato;
+}
+.item + h3{
+    font-size: 30px;
+    color: cadetblue;
+}
+
+.item ~ h3{
+    font-size: 30px;
+    color: cadetblue;
+}
+
+
+
+
+/******************************************************************/
+.h1{
+    text-align: center;
+    padding: 15px;
+    position: relative;
+    color: blue;
+}
+.h1::after{
+ content: "";   
+ background-color: blue;
+ width: 45%;
+ height: 4px;
+ position: absolute;
+ top: 50%;
+ right: 10px;
+}
+.h1::before{
+ content: "";   
+ background-color: blue;
+ width: 45%;
+ height: 4px;
+ position: absolute;
+ top: 50%;
+ left: 10px;
+}
+
+
+/************************/
+
+.h2{
+width: 22%;
+padding: 20px;
+text-align: center;
+border:  3px solid #f00;
+margin: 15px;
+border-radius: 5px;
+position: relative;
+}
+
+.h2::after{
+     content: "";
+    width: 4px;
+    height: 20px;
+    background-color: #f00;
+    position: absolute;
+    top: 90%;
+    left: 35px;
+
+}
+.h2::before{
+    content: "";
+     width: 30px;
+    height: 20px;
+    background-color: #fff;
+    position: absolute;
+    top: 90%;
+    left: 20px;
+    /* z-index: 999999; */
+}
+
+
+
+
+/****************************************************************/
+
+/* .icons i{
+    font-size:  30px;
+    color: #f00;
+} */
+
+
+
+/************************************************************************/
+/*
+1-display:inline-block
+2-float 
+
+3-display flex   layout  padding margin
+1-parent   
+--
+--display: flex;
+--flex-wrap: nowrap;
+-- flex-direction: row;
+--flex-flow:  direction   wrap
+
+
+2-children
+*/
+.baking{
+    /* background-color: #f00; */
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.our-baking{
+    /* background-color: tan; */
+    width: 33.3%;
+    text-align: center;
+  
+}
+.our-baking img{
+    width: 95%;
+}
+
+
+
+
+nav ul{
+    background-color: rgb(160, 151, 151);
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+ul li{
+   
+    width: 10%;
+    padding: 12px;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+
+
+
+
+header{
+    background-image: url(../images/bgs.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    position: relative;
+  
+}
+.caption{
+   
+   height: 100vh;
+      display: flex;
+      justify-content: center;
+       text-align: center;
+       align-items: center;
+       color: #fff;
+}
+.caption h1{
+    font-size: 45px;
+}
+.caption p{
+    font-size: 30px;
+    width: 60%;
+    margin: auto;
+}
+.liner{
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+}
+
+@media (max-width:700px){
+
+   nav ul{
+flex-direction: column;
+background-color: #fff;
+    }
+
+
+    ul li{
+        color:rgb(160, 151, 151) ;
+border-bottom: 3px solid rgb(160, 151, 151);
+width: 100%;
+padding: 20px;
+    }
+}
