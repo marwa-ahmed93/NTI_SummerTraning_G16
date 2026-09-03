@@ -1,0 +1,161 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*************  Variables *****************************/
+:root{
+
+    --main-color :rgb(36, 151, 180) ;
+    --second-color:teal ; 
+    --badel:brown;
+    --main-border-radius:10px ;
+    --main-padding:15px ; 
+    --color-font: #c5bbbb ;
+    --font-size:20px ;
+
+}
+
+/* html{
+      --main-color :rgb(212, 200, 34) ;
+      --second-color:teal ; 
+    --badel:brown;
+    --main-border-radius:10px ;
+    --main-padding:15px ; 
+    --color-font: #c5bbbb ;
+    --font-size:20px ;
+} */
+
+
+
+nav ul {
+    background-color: rgb(21, 37, 37);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+        color: #d11b1b;
+}
+ nav ul li a{
+    color: rgb(46, 190, 33);
+}
+
+
+/*************************** Display-flex  **********************************/
+.item{
+    /* background-color: aqua; */
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    column-gap: 12px;
+    justify-content: space-evenly;
+}
+.inner-item{
+    background-color: var(--main-color, var(--badel , red));
+    color: var(--color-font);
+    width: calc(100% / 3);
+    text-align: center;
+    padding: var(--main-padding);
+      border-radius: var(--main-border-radius);
+}
+.inner-item p{
+    font-size: var(--font-size);
+}
+.inner-item img{
+    width: 95%;
+    border-radius:inherit;
+}
+
+/***********************/
+/*
+flex-grow   
+ 2 + 1 + 0 + 2 + 0 => 5    500/5 => 100
+
+ 2*100 => 200
+ 1*100=>  100
+ 0*100=> 
+ 2*100=>  200
+ 0*100=>
+
+
+
+ flex-shrink
+ 1+2+1+1+1 => 6   500/5  => 83.3   
+ 1*83.3  =>83.3 
+ 2*83.3  =>
+
+*/
+
+
+
+.parent{
+    background-color: tomato;
+    width: 1000px;
+    height: 80vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* flex-direction: column; */
+    /* flex-flow: row wrap; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    /* align-items: center;
+    justify-content: center;*/
+} 
+    
+.ch{
+    width: 100px;
+    height: 30px;
+}
+.one{
+    background-color: aqua;
+    order: 0;
+    /* flex-grow: 2;       2*100 => 200px   +100   =>300 */
+    /* width: 2%; */
+    /* flex-shrink: 2; */
+}
+.two{
+       background-color: rgb(255, 238, 0);
+    /* order: 1; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+
+ 
+}
+.three{
+       background-color: rgb(21, 160, 68);
+    /* order: 2; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+
+ 
+}
+.four{
+       background-color: rgb(35, 21, 160);
+    order: 0;
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+
+ 
+}
+.five{
+           background-color: rgb(21, 160, 141);
+    /* order: -1; */
+    flex-grow: 0;
+    /* flex-shrink: 1; */
+
+
+}

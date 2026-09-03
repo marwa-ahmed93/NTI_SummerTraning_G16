@@ -1,0 +1,515 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.5.15,
+* Autoprefixer: v10.5.0
+* Browsers: last 4 version
+*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/****************  Animation ******************************/
+
+.item {
+  background-color: tomato;
+  width: 150px;
+  height: 150px;
+  -webkit-animation-name: coloring;
+          animation-name: coloring;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes coloring {
+  0% {
+    background-color: tomato;
+  }
+  50% {
+    background-color: rgb(127, 175, 38);
+  }
+  100% {
+    background-color: rgb(6, 33, 105);
+  }
+}
+
+@keyframes coloring {
+  0% {
+    background-color: tomato;
+  }
+  50% {
+    background-color: rgb(127, 175, 38);
+  }
+  100% {
+    background-color: rgb(6, 33, 105);
+  }
+}
+
+.slide {
+  background-image: url(../images/bgs.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  -webkit-animation-name: slider;
+          animation-name: slider;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes slider {
+  0% {
+    background-image: url(../images/bgs.jpg);
+    width: 0;
+    height: 0;
+  }
+  25% {
+    background-image: url(../images/business-2.jpg);
+    width: 100%;
+    height: 100vh;
+  }
+  50% {
+    background-image: url(../images/shutterstock_277750193.jpg);
+    width: 0;
+    height: 0;
+  }
+  75% {
+    background-image: url(../images/ben-garratt-134774-600x500.jpg);
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    background-image: url(../images/clem-onojeghuo-206832-600x500\ \(2\).jpg);
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes slider {
+  0% {
+    background-image: url(../images/bgs.jpg);
+    width: 0;
+    height: 0;
+  }
+  25% {
+    background-image: url(../images/business-2.jpg);
+    width: 100%;
+    height: 100vh;
+  }
+  50% {
+    background-image: url(../images/shutterstock_277750193.jpg);
+    width: 0;
+    height: 0;
+  }
+  75% {
+    background-image: url(../images/ben-garratt-134774-600x500.jpg);
+    width: 100%;
+    height: 100vh;
+  }
+  100% {
+    background-image: url(../images/clem-onojeghuo-206832-600x500\ \(2\).jpg);
+    width: 0;
+    height: 0;
+  }
+}
+
+.img {
+  /* transform:rotateY(180deg) ; */
+  position: relative;
+  -webkit-animation-name: moveTaxi;
+          animation-name: moveTaxi;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+@-webkit-keyframes moveTaxi {
+  0% {
+    left: 0;
+    top: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    left: 800px;
+    top: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  51% {
+    left: 800px;
+    top: 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    left: 0;
+    top: 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes moveTaxi {
+  0% {
+    left: 0;
+    top: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  50% {
+    left: 800px;
+    top: 0;
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+  }
+  51% {
+    left: 800px;
+    top: 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  100% {
+    left: 0;
+    top: 0;
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.type {
+  text-align: center;
+  padding: 20px;
+}
+.type::after {
+  content: "|";
+  -webkit-animation-name: typed;
+          animation-name: typed;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+@-webkit-keyframes typed {
+  0% {
+    content: "| ";
+  }
+  2% {
+    content: "|D";
+  }
+  4% {
+    content: "|De";
+  }
+  6% {
+    content: "|Des";
+  }
+  8% {
+    content: "|Desi";
+  }
+  10% {
+    content: "|Desig";
+  }
+  12% {
+    content: "|Design";
+  }
+  14% {
+    content: "|Desig";
+  }
+  16% {
+    content: "|Desi";
+  }
+  18% {
+    content: "|Des";
+  }
+  20% {
+    content: "|De";
+  }
+  22% {
+    content: "|D";
+  }
+
+  24% {
+    content: "|D";
+  }
+  26% {
+    content: "|De";
+  }
+  30% {
+    content: "|Dev";
+  }
+  32% {
+    content: "|Devl";
+  }
+  34% {
+    content: "|Devlo";
+  }
+  36% {
+    content: "|Devlop";
+  }
+  38% {
+    content: "|Devlopm";
+  }
+  40% {
+    content: "Devlopme";
+  }
+  42% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  44% {
+    content: "Devlopmen";
+  }
+}
+@keyframes typed {
+  0% {
+    content: "| ";
+  }
+  2% {
+    content: "|D";
+  }
+  4% {
+    content: "|De";
+  }
+  6% {
+    content: "|Des";
+  }
+  8% {
+    content: "|Desi";
+  }
+  10% {
+    content: "|Desig";
+  }
+  12% {
+    content: "|Design";
+  }
+  14% {
+    content: "|Desig";
+  }
+  16% {
+    content: "|Desi";
+  }
+  18% {
+    content: "|Des";
+  }
+  20% {
+    content: "|De";
+  }
+  22% {
+    content: "|D";
+  }
+
+  24% {
+    content: "|D";
+  }
+  26% {
+    content: "|De";
+  }
+  30% {
+    content: "|Dev";
+  }
+  32% {
+    content: "|Devl";
+  }
+  34% {
+    content: "|Devlo";
+  }
+  36% {
+    content: "|Devlop";
+  }
+  38% {
+    content: "|Devlopm";
+  }
+  40% {
+    content: "Devlopme";
+  }
+  42% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  18% {
+    content: "Devlopmen";
+  }
+  44% {
+    content: "Devlopmen";
+  }
+}
+
+.loader {
+  --color-1: #fff;
+  --size: 1px;
+
+  width: calc(48 * var(--size));
+  height: calc(48 * var(--size));
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: "";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: calc(48 * var(--size));
+  height: calc(48 * var(--size));
+  border-radius: 50%;
+  border: calc(2 * var(--size)) solid var(--color-1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: animloader 2s linear infinite;
+          animation: animloader 2s linear infinite;
+}
+.loader::after {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes animloader {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes animloader {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/*****************  css nesting ********************************************************/
+
+.parent {
+&:hover{
+  background-color: grey;
+}
+  background-color: aqua;
+  .chiled {
+    background-color: tomato;
+    width: 30%;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
+    p {
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: blanchedalmond;
+    }
+    h2 {
+      font-size: 30px;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #c2bebe;
+    }
+  }
+}
+
+
+
+
+
+/**************************** Box-shadow *********************************************************/
+
+.box{
+  width: 150px;
+  height: 150px;
+  background-color: brown;
+  margin: 50px auto;
+  /* box-shadow: 35px 2px 32px 24px rgba(105, 99, 99, 0.71); */
+  -webkit-box-shadow: 35px 2px 32px 24px rgba(185, 75, 75, 0.71);
+          box-shadow: 35px 2px 32px 24px rgba(185, 75, 75, 0.71);
+}
+
+
+
+.text-shadow{
+  text-align: center;
+  font-size: 30px;
+  /* text-shadow: 20px 20px 10px gray; */
+  text-shadow: 4px 15px 3px rgba(0,0,0,0.52);
+}
+
+
+
+
+
+
+
+/**************************************************************/
+
+#header{
+  /* background-image: linear-gradient(45deg, red 10% , green 10% , blue 20%, tomato 20%); */
+  height: 100vh;
+
+  /* background-image: linear-gradient(rgba(98, 194, 98,0.4) , rgba(117, 117, 240,0.4),
+  rgba(172, 82, 82,0.4) , rgba(68, 206, 206,0.4) ,rgba(192, 144, 81,0.4)) , url(../images/shutterstock_277750193.jpg);
+  background-size: cover;
+  background-position: center center; */
+
+
+
+  background-image: radial-gradient(rgba(62, 62, 179, 0.4) , rgba(209, 98, 98,0.4) , rgba(27, 161, 49,0.4)) , url(../images/shutterstock_277750193.jpg);
+
+ background-size: cover;
+  background-position: center center;
+
+}

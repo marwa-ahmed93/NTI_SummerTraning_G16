@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.parent{
+    /* background-color: brown; */
+    height: 80vh;
+    /* display: flex; */
+    display: grid;
+    /* grid-template-columns: auto  auto auto;
+    grid-template-rows: auto auto; */
+
+
+    grid-template-areas: 
+    "item1   item2  item2 item3"
+    "item1    item4   item5 item6"
+    "item1  item7   item8   . "
+   
+    ;
+    gap: 10px;
+}
+.item{
+    /* width: 20%; */
+}
+.one{
+    background-color: blue;
+    grid-area: item1;
+}
+.two{
+    background-color: rgb(30, 196, 99);
+    grid-area: item2;
+}
+.three{
+    background-color: rgb(255, 0, 76);
+    grid-area: item3;
+}
+.four{
+    background-color: rgb(177, 105, 12);
+    grid-area: item4;
+}
+.five{
+    background-color: rgb(255, 0, 119);
+    grid-area: item5;
+}
+
+.item6{
+    background-color: rgb(255, 0, 119);
+    grid-area: item6;
+}
+
+.item7{
+    background-color: rgb(255, 0, 119);
+    grid-area: item7;
+}
+
+.item8{
+    background-color: rgb(255, 0, 119);
+    grid-area: item8;
+}
