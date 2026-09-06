@@ -7,30 +7,55 @@
 
 .parent{
     /* background-color: brown; */
-    height: 80vh;
+       /* grid-template-columns: 300px auto 300px;
+   grid-template-rows: repeat(3 ,100px); */
+
     /* display: flex; */
-    display: grid;
+    /* display: grid; */
     /* grid-template-columns: auto  auto auto;
     grid-template-rows: auto auto; */
 
-
+/* 
     grid-template-areas: 
     "item1   item2  item2 item3"
     "item1    item4   item5 item6"
     "item1  item7   item8   . "
    
     ;
-    gap: 10px;
+    gap: 10px; */
+
+/* grid-template-columns: 250px  auto  auto  300px; */
+/* grid-template-rows: 100px 100px; */
+grid-auto-rows: 100px;
+
+    height: 80vh;
+    border: 3px solid teal;
+    display: grid;
+grid-template-areas:  
+"item1  item2 item2 item2 item2  item3"
+"item1 item4 item4 item5 item5 item6"
+"item1 item7 item7 item8 item8 item6"
+;
+ gap: 10px;
+
+ /* justify-content: center; */
+ /* align-content: space-evenly; */
+
+ /* align-items: center;
+ justify-items: center; */
 }
 .item{
     /* width: 20%; */
 }
 .one{
     background-color: blue;
+    /* width: 50%; */
     grid-area: item1;
+    /* margin: auto; */
 }
 .two{
     background-color: rgb(30, 196, 99);
+       /* width: 50%; */
     grid-area: item2;
 }
 .three{
@@ -47,16 +72,78 @@
 }
 
 .item6{
-    background-color: rgb(255, 0, 119);
+    background-color: rgb(14, 186, 192);
     grid-area: item6;
 }
 
 .item7{
-    background-color: rgb(255, 0, 119);
+    background-color: rgb(48, 141, 35);
     grid-area: item7;
 }
 
 .item8{
-    background-color: rgb(255, 0, 119);
+    background-color: rgb(38, 0, 255);
     grid-area: item8;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parent_2 {
+    display: grid;
+    height: 90vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+    text-align: center;
+}
+    
+.div1 {
+    grid-column: span 3 / span 3;
+    background-color: aqua;
+}
+
+.div2 {
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+        background-color: rgb(78, 184, 37);
+
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 2;
+        background-color: rgb(11, 53, 192);
+
+}
+
+.div4 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+        background-color: rgb(195, 0, 255);
+
+}
+
+.div5 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+        background-color: rgb(199, 150, 58);
+
+}
+
+.div6 {
+    grid-column: span 3 / span 3;
+    grid-row-start: 4;
+        background-color: rgb(255, 0, 0);
+
+}
+        
