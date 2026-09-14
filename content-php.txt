@@ -1,0 +1,1091 @@
+-install
+-intro php
+-ide
+-tags
+-variable
+-casting
+-if
+-operators
+
+--switch
+--comments
+--operators
+--increment&decrement
+--loop-break-continue
+--Array
+--foreach
+--AssocArray
+--multiArray
+--bassByValue
+--function
+--scope
+--const
+--get&post
+--cookie
+--session
+--server& validate
+--files
+--request
+--BuiltInFunctions
+--validates
+--TypeofError
+--include&require
+--echo-print  single-doublequate
+--files
+
+
+--files
+--request
+--BuiltInFunctions
+{
+
+
+/** array
+ * chunk()
+ * array_diff()
+ * array_comping()
+ * array_count_value()
+ * array_diff_assoc()
+ * array_fill
+ * array_key_exist()
+ * array_push()
+ * array_unshift()
+ * array_pop()
+ * array_shift()
+ * array_reverse()
+ * slice()
+ * array_unique()
+ * asort()
+ * ksort()
+ * slice()
+ * splice()
+ * slice()
+ * extract()
+ * shuffle()
+ * in_array()
+ * 
+ * 
+ * string
+ * 
+ * chunk_split()
+ * echo()
+ * explode()
+ * implode()
+ * print_if()
+ * join()
+ * lefirst()
+ * ltrim()
+ * md5
+ * nl2br
+ * shal1()
+ * substr()
+ * math()
+ * ceil()
+ * floor()
+ * max()
+ * min()
+ * 
+ * 
+ */
+
+
+}
+
+--validates
+
+--TypeofErrors
+{/** types of error
+ * warning
+ * fatal error
+ * syntax error
+ * notice
+ * deprecated error
+ * 
+ */}
+
+--include&require
+
+--echo-print  single-doublequate
+
+--files
+  { readfile('t.text')
+      r/w/a
+    $file= fopen('t.text','r')
+     echo fread($file,200)  fread($file,filesize('t.text'))
+      fclose($file)
+
+
+   $file= fopen('t.text','w')
+     echo fwrite($file,"welcome ahmed mohamed") 
+      fclose($file)
+
+ $file= fopen('t.text','a')
+     echo fwrite($file,"welcome ahmed mohamed") 
+      fclose($file)
+
+$file= fopen('t.text','r') resource
+     echo fgets($file) 
+      fclose($file)
+      
+while($line as fgets($file)){
+echo $line;
+}
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+database
+1-relational db
+no sql db
+
+ERD
+
+CREATE BATABASE NTI
+DEOP DATABASE NTI
+ CMD 
+   mysql -u root
+         CREATE BATABASE NTI;
+
+
+
+
+CREATE TABLE cutomers (
+    id INT AUTO_INCREMENT PRIMARY KEY ,
+    name varchar(100) NOT NULL ,
+    email varchar(50) UNIQUE ,
+    birdth_date DATE,
+    gender ENUM('male','femail') DEFAULT 'male' ,
+    INDEX id_name_email(name,email)
+    
+    
+    
+    );
+
+
+
+INSERT INTO users(name,email ,password , gender ,birth_date)
+VALUES ('malik','malik@gmail.com','1123','male','2022-7-13');
+
+
+
+
+
+INSERT INTO users(name,email ,password , gender ,birth_date)
+VALUES ('malik','malik@gmail.com','1123','male','2022-7-13'),
+('malik','malik@gmail.com','1123','male','2022-7-13'),
+('malik','malik@gmail.com','1123','male','2022-7-13'),
+('malik','malik@gmail.com','1123','male','2022-7-13')
+
+
+
+UPDATE users SET name = "zain" WHERE id = 1
+
+UPDATE users SET name = "mohamed" , gender = "male" WHERE id = 1;
+
+
+
+DELETE FROM users WHERE id=2;
+
+
+SELECT * FROM `customers`;
+
+
+SELECT first_name , last_name FROM `customers` WHERE 1;
+
+
+
+SELECT first_name as firstName , last_name FROM `customers` WHERE 1;
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+SELECT * FROM `customers` WHERE 1
+
+(> ,< , )
+
+SELECT * FROM `customers` WHERE id >500
+
+
+SELECT * FROM `customers` WHERE first_name ="Eleonora"
+
+
+SELECT * FROM `customers` WHERE country = "China";
+
+SELECT first_name FROM `customers` WHERE country = "China";
+
+
+                          (AND  && OR)
+
+SELECT first_name FROM `customers` WHERE country = "China" AND city ="Jiabei" OR city =" ";
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                       (BETWEEN && IN)
+
+SELECT * FROM `customers` WHERE id = 200 OR id = 250 or id = 300;
+
+SELECT * FROM `customers` WHERE id IN (200,250,300);
+
+
+SELECT * FROM `customers` WHERE id > 250 AND id <500;
+
+
+SELECT * FROM `customers` WHERE id BETWEEN 250 AND 500;
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+                     lIKE => (% ,_)
+
+SELECT * FROM `customers` WHERE first_name =  "zain";
+SELECT * FROM `customers` WHERE first_name =  "joh";
+
+
+SELECT * FROM `customers` WHERE first_name LIKE "jo%";
+
+SELECT * FROM `customers` WHERE first_name LIKE "jo_";
+
+SELECT * FROM `customers` WHERE first_name LIKE "jo__";
+
+SELECT * FROM `customers` WHERE first_name LIKE "_jo__";
+
+SELECT * FROM `customers` WHERE first_name LIKE "%j";
+
+SELECT * FROM `customers` WHERE first_name LIKE "%a%";
+
+SELECT * FROM `customers` WHERE first_name LIKE "%j%";
+
+////////////////////////////////////////////////////
+
+                       (AND , OR , NOT)
+
+SELECT * FROM `customers` WHERE id NOT BETWEEN 10 AND 60;
+
+
+///////////////////////////////////////////////////////////////////
+                         DISTINCT 
+                  
+SELECT * FROM `customers` WHERE country = "syria";
+SELECT DISTINCT country FROM `customers` WHERE country = "syria";
+SELECT DISTINCT first_name FROM `customers`
+SELECT DISTINCT first_name FROM `customers` WHERE country = "syria";
+SELECT DISTINCT first_name ,last_name FROM `customers`;
+
+////////////////////////////////////////////////////////////////////////
+
+
+                  ORDER BY
+
+SELECT * FROM customers ORDER BY id;
+SELECT * FROM customers ORDER BY id ASC;
+SELECT * FROM customers ORDER BY id DESC;
+SELECT * FROM customers ORDER BY COUNTRY DESC;
+
+SELECT first_name , money FROM customers ORDER BY first_name ASC , money DESC;
+SELECT first_name , money FROM customers ORDER BY first_name , money ASC;
+
+SELECT first_name , money FROM customers ORDER BY first_name , money ASC WHERE id > 5;       error
+
+SELECT first_name , money FROM customers WHERE id > 5 ORDER BY first_name , money ASC ;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 
+                           Pagination  => limit offset
+
+SELECT * FROM customers LIMIT 10;
+SELECT * FROM customers LIMIT 10 OFFSET 0;
+SELECT * FROM customers LIMIT 20 OFFSET 10;
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+                        Argument function
+
+min()      SELECT MIN(money) FROM customers;      with number 
+
+max()      SELECT MAX(money) FROM customers;    with number 
+
+count()   SELECT COUNT(*) FROM customers;   number of data  
+          SELECT COUNT(*) as data_number FROM customers;
+          SELECT COUNT(id) as data_number FROM customers;
+
+sum()     SELECT SUM(id) FROM customers;   number of data  
+avg()     SELECT AVG(id) FROM customers;
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+                           Group by
+
+SELECT COUNT(*) FROM customers WHERE country = "China";
+SELECT COUNT(*) as COUNT , country FROM customers WHERE country = "China";
+
+SELECT COUNT(*) as COUNT , country FROM customers GROUP BY country;
+
+SELECT COUNT(*) AS count_num , country FROM customers GROUP BY country ORDER BY count_num;
+
+SELECT COUNT(*) as COUNT , country FROM customers WHERE country ="Afghanistan";
+
+SELECT SUM(money) as total , money,country FROM customers GROUP BY country;
+ 
+
+
+ ////////////////////////////////////////////////////////////////////////////              
+
+
+                            HAVING
+
+SELECT COUNT(*) ,country FROM customers GROUP BY country;
+
+SELECT COUNT(*) as count ,country FROM customers GROUP BY country HAVING count >5;
+ 
+                        where with having
+SELECT COUNT(*) as count ,country FROM customers WHERE money >1000 GROUP BY country HAVING count >5;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                             relationship
+
+                     --------one to one----------------
+
+
+CREATE TABLE nationalids(
+id int PRIMARY KEY AUTO_INCREMENT  ,
+   number_id int UNIQUE ,
+    user_id int UNIQUE ,
+    FOREIGN KEY(user_id)REFERENCES users(id)
+)
+
+
+
+
+                           --------one to many----------------
+
+
+CREATE TABLE departments(
+id int  PRIMARY KEY AUTO_INCREMENT,
+    name varchar(50)
+);
+
+
+CREATE TABLE employees (
+id int PRIMARY key AUTO_INCREMENT,
+name varchar(100),
+department_id int ,
+    FOREIGN KEY(department_id)REFERENCES departments(id)     
+);
+
+
+
+
+
+
+
+                  -----------------many to may -------------------------  session_10
+
+CREATE table students(
+id int AUTO_INCREMENT PRIMARY key ,
+ name varchar(50)   
+);
+CREATE table subjects(
+id int AUTO_INCREMENT PRIMARY key ,
+ name varchar(50)   
+);
+CREATE TABLE student_subject(
+id int PRIMARY key AUTO_INCREMENT ,
+student_id int ,
+subject_id int ,
+FOREIGN key(student_id)REFERENCES students(id),  
+   FOREIGN key(subject_id)REFERENCES subjects(id) 
+
+)
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+
+               ------------------join-------------------------
+
+SELECT * FROM employees
+JOIN departments
+on employees.department_id = departments.id
+
+
+
+SELECT emp.name , dep.name FROM employees as emp
+JOIN departments as dep
+on emp.department_id = dep.id;
+
+
+
+SELECT emp.name as employee_name , dep.name as department_name FROM employees as emp
+JOIN departments as dep
+on emp.department_id = dep.id;
+
+SELECT emp.name as employee_name , dep.name as department_name FROM employees as emp
+LEFT JOIN departments as dep
+on emp.department_id = dep.id;
+
+SELECT emp.name as employee_name , dep.name as department_name FROM employees as emp
+RIGHT JOIN departments as dep
+on emp.department_id = dep.id;
+
+
+-----union------
+
+SELECT name FROM employees
+UNION
+SELECT name FROM users
+
+
+SELECT name FROM employees
+UNION ALL 
+SELECT first_name FROM users
+
+
+
+
+SELECT emp.name as employees_name , dep.name as departments_name  FROM employees AS emp
+LEFT JOIN departments AS dep
+ON 
+emp.depertment_id  =dep.id;
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+                  copy structure
+
+CREATE TABLE customer_test LIKE customers
+
+INSERT INTO customer_test SELECT * FROM customers
+
+CREATE TABLE customer_test as SELECT * FROM customers
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                              ------DDL---------
+
+                           (DDL-DML-DcL-MTL-DQL)
+
+DDL=> data defination language
+
+                           -----trancet------ delete data from table
+
+TRUNCATE TABLE customer_test
+
+ 
+                      ---------------trancet && delete------ 
+
+       RENAME
+RENAME TABLE customer2 TO customer_test
+
+
+   ALTER
+ALTER TABLE customer_test ADD age int
+
+ALTER TABLE customer_test MODIFY age varchar(50)
+
+ALTER TABLE customer_test RENAME COLUMN first_name TO name     + MySQL 8.0 
+
+ALTER TABLE customer_test CHANGE COLUMN first_name name varchar(100) 
+
+
+ALTER TABLE customer_test DROP COLUMN age
+
+ALTER TABLE `customer_test` ADD PRIMARY KEY(`id`)
+
+ALTER TABLE customer_test 
+DROP PRIMARY KEY;
+
+
+ALTER TABLE customer_test 
+ADD CONSTRAINT unique_email UNIQUE (email);
+
+ALTER TABLE customer_test DROP INDEX unique_email;
+
+
+
+
+
+START TRANSACTION;
+
+UPDATE customer_test 
+SET money = money + 1000
+WHERE id = 1;
+
+UPDATE  customer_test  
+SET money = money - 1000
+WHERE id = 2;
+
+COMMIT;
+
+
+
+
+
+///////////////////////////////////////////////////////////
+
+    condations
+
+SELECT first_name , money ,
+CASE
+WHEN money <50000 THEN "poor"
+WHEN money <100000 THEN "midpoor"
+WHEN money >100000 THEN "rich"
+ELSE "invalid"
+END as result
+FROM `customers`;
+
+
+
+
+UPDATE customers
+SET money =
+CASE
+WHEN money <1000 THEN money+1000  
+WHEN money <5000 THEN money+5000
+END
+
+/////////////////////////////////////////////////////////////////
+                         functions '
+
+--concat      CONCAT_WS
+ SELECT concat(first_name,last_name) FROM customers;
+
+SELECT concat(first_name," " ,last_name) FROM customers; with space
+
+
+--LCASE  && LOWER => Convert the text to lower-case:
+
+---LPAD   LTRiM  REPEAT   REPLACE   REVERSE        UCASE() = UPPER()      TRIM() 
+
+
+
+----------Numeric Functions:
+
+ABS()  ,  CEIL(25.75)
+
+-------------Date Functions:
+------------------Advanced Functions: 
+COALESCE() 
+CONNECTION_ID() 
+CURRENT_USER() 
+DATABASE()
+IF()
+
+
+case()
+SELECT name, salary ,
+CASE
+WHEN salary <10000 THEN "poor"
+WHEN salary >10000 THEN "mid rich"
+WHEN salary >15000 THEN "rich"
+ELSE "invalid"
+END as salary_statues
+FROM `employees`;
+
+
+
+CAST()
+COALESCE()
+CONNECTION_ID()
+CURRENT_USER()
+DATABASE()
+
+IF()   SELECT if(gender="male" , "yes","no") FROM `customers`;
+
+ifnull   SELECT IFNULL(first_name,"test") FROM `customers`;
+
+
+ISNULL()   null=> 1  not null=> 0     SELECT isnull(first_name) FROM `customers`;
+
+NULLIF()       returns NULL if they are equal      SELECT NULLIF(first_name ,last_name) FROM `customers`;
+
+LAST_INSERT_ID()    last row that has been inserted in a table
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+               ----------------create-function----------------------
+
+      --create function--------
+
+DELEMETER //
+CREATE FUNCTION calc_taxses(salary int)
+RETURNS int 
+BEGIN
+DECLARE taxses int;
+SET taxses = salary*0.14;
+RETURN taxses;
+END  //
+
+
+
+---use function
+SELECT name ,salary , calc_taxses(salary)  AS taxes
+FROM employees;
+
+SELECT calc_taxses(pouns) FROM users;
+
+
+
+ ----calc your age
+DELIMITER //
+CREATE FUNCTION calc_age(bitrh_date date)
+RETURNS int
+BEGIN
+RETURN timestampdiff(year,bitrh_date,CURRENT_DATE());
+
+END //
+
+SELECT birth_date , calc_age(birth_date) FROM users;
+
+///////////////////////////////////////////////////////////////////////////////
+
+                  ----PROCEDURE     in out inout
+--insert value at users using proceure
+DELIMITER //
+CREATE PROCEDURE insert_user(IN user_name varchar(100) ,IN email varchar(100))
+BEGIN
+INSERT INTO users(name,email)
+VALUES(user_name ,email);
+END //
+
+
+CALL insert_user('asmaa','asmaa@gmail.com')
+
+-----------------out-----------------------------
+
+SELECT email FROM `users` WHERE id=2  => 
+=> 
+
+DELIMITER//
+CREATE PROCEDURE get_user_email(IN user_id int,OUT myEmail varchar(100) )
+BEGIN
+SELECT email INTO myEmail FROM users WHERE id = user_id;
+END //
+
+
+call get_user_email(1,@email);
+SELECT  @email
+
+-------------------------------------------------
+
+DELIMITER //
+
+CREATE PROCEDURE get_user_email(
+    IN user_id INT,
+    OUT myEmail VARCHAR(100)
+)
+BEGIN
+    SELECT email 
+    INTO myEmail 
+    FROM users 
+    WHERE id = user_id;
+END //
+
+DELIMITER ;
+
+
+
+CALL get_user_email(1, @email);
+SELECT @email;
+
+
+-----------------INOUT ----------------------------------
+
+DELIMITER //
+CREATE PROCEDURE full_user(in user_id int , OUT myEmail varchar(100) , INOUT bouns int) 
+BEGIN
+SELECT email INTO myEmail FROM users WHERE id = user_id
+SET bouns = bouns +200
+END //
+     
+
+DELIMITER //
+CREATE PROCEDURE full_user(in user_id int , OUT myEmail varchar(100) , INOUT user_bouns int) 
+BEGIN
+SELECT email INTO myEmail FROM users WHERE id = user_id;
+UPDATE users SET bouns = user_bouns + bouns ;
+END //
+
+
+
+SET @user_bouns = 200;
+call full_user(3,@email,@user_bouns);
+SELECT @email , @user_bouns;
+
+
+
+
+
+
+ /////////////////////////////////////////////////////////////////session_11 ///////////////////
+ 
+-----------------Trigger------------------------------
+
+DELIMITER //
+CREATE TRIGGER national_user
+AFTER INSERT ON users
+FOR EACH ROW
+BEGIN
+INSERT INTO nationalids(number_id ,user_id)
+VALUES(1236058 , NEW.id);
+END //
+
+
+
+
+DELIMITER //
+CREATE TRIGGER check_bouns
+BEFORE UPDATE ON users
+FOR EACH ROW
+BEGIN
+IF new.bouns > 2000
+THEN SET new.bouns = 2000;
+END IF ;
+END //
+
+
+
+DELIMITER //
+CREATE TRIGGER users_logs_delete
+AFTER DELETE ON users
+FOR EACH ROW
+BEGIN
+INSERT INTO users_logs(name,created_at)
+VALUES(old.name ,NOW());
+
+END //
+
+
+
+ //////////////////////////////////////////////////////////////////////////////////////
+
+-----------------------view---------------------------
+CREATE new users_info
+AS SELECT * FROM users
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+
+--------------subquery---------------
+
+SELECT AVG(salary) FROM employees
+
+SELECT name , salary  FROM employees WHERE salary > (SELECT AVG(salary) FROM employees)
+
+
+SELECT name ,(SELECT name FROM departments WHERE departments.id = employees.department_id) as depart_name
+FROM `employees`;
+
+
+SELECT name FROM employees WHERE department_id IN(SELECT id FROM departments WHERE name = "sales");
+
+----------------exists---------
+
+SELECT name FROM employees WHERE EXISTS (SELECT id FROM departments WHERE departments.id=employees.department_id);
+
+SELECT name FROM employees WHERE NOT EXISTS (SELECT id FROM departments WHERE departments.id=employees.department_id);
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+
+
+           -------------selfjoin-------------------
+
+SELECT emp.name as employee_name ,manager.name as manager_name FROM `employees` as emp
+LEFT JOIN employees as manager ON emp.manager_id = manager.id
+
+
+
+/////////////////////////////////////////////////////////////
+engin
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+         -----------------DB Connection---------------------
+
+
+$connection = mysqli_connect('localhost','root','','nti11');
+if($connection){
+   echo "success";
+}
+else{
+    echo "connection faild";
+}
+
+
+<?php
+require('connection.php');
+$query = "SELECT * FROM `customers`";
+$result = mysqli_query($connection , $query);
+$customers = mysqli_fetch_all($result ,MYSQLI_ASSOC);
+// echo "<pre>";
+// print_r($data);die();
+?>
+
+
+
+
+foreach($customers  as $customer)
+  <td><?php $customer)['first_name']   ?></td>
+
+
+         ---------------insert------------------
+
+require('connection.php');
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$email = $_POST['email'];
+$gender = $_POST['gender'];
+$money = $_POST['money'];
+$city = $_POST['city'];
+$country = $_POST['country'];
+$country_code = $_POST['country_code'];
+
+
+$query = "INSERT INTO customers (`first_name`,`last_name`,`email`,`gender`,`money`,`city`,`country`,`country_code`)
+VALUES('$first_name','$last_name','$email','$gender','$money','$city','$country','$country_code')" ;
+
+$result = mysqli_query($connection , $query);
+if($result){
+    echo "Inserted Successfully";
+    header('location:index.php');
+    exit();
+}
+  header('location:create.php');
+    exit();
+}
+
+
+
+              -------------delete--------------
+
+require('connection.php');
+$id = $_GET['id'];
+if($id){
+$query = "DELETE FROM customers WHERE id = $id " ; 
+$result = mysqli_query($connection , $query );
+  
+  if($result){
+    header('location:index.php');
+    exit();
+  }
+}
+
+      <td> <a href="deleteCustomer.php?id=<?php echo $row['id'] ?>" class="btn btn-danger">Delete</a></td>
+
+
+
+
+
+
+
+
+
+
+   -----------------API  & select-------------------
+
+           selectAll.php
+
+<?php
+require('dbc.php');
+header('content-type:application/json');
+
+$query = "SELECT * FROM `customers`";
+$result = mysqli_query($connection , $query);
+$customers= mysqli_fetch_all($result , MYSQLI_ASSOC);
+
+echo json_encode($customers);
+
+
+
+
+
+                  selectOne.php
+
+
+<?php
+require('dbc.php');
+// header('content-type:application/json');
+
+if(!isset($_GET['id']))
+{
+    echo json_encode(['message=> you must send id']);
+}
+else{
+$id=$_GET['id'];
+$query = "SELECT * FROM `customers` WHERE id = $id";
+$result = mysqli_query($connection , $query);
+   if(mysqli_num_rows($result) > 0){
+    $customer= mysqli_fetch_assoc($result);
+
+      echo json_encode($customer);
+        }
+    else{
+           echo json_encode(['message=> there is no data']);
+ 
+    }
+
+}
+
+
+
+
+            ---------------insert-------------------
+
+
+"first_name": "malik",
+    "last_name": "mohamed",
+    "email": "malik@gmail.com",
+    "gender": "Male",
+    "money": "52036$",
+    "city": "zagazig",
+     "country": "cairo",
+      "country_code": "unm"
+
+{
+"first_name": "malik",
+    "last_name": "mohamed",
+    "email": "malik@gmail.com",
+    "gender": "Male",
+    "money": "52036$",
+    "city": "zagazig",
+     "country": "cairo",
+      "country_code": "unm"
+   
+}
+
+
+
+require('dbc.php');
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+ if(isset($_POST['name']) && !empty($_POST['name'])
+  && isset($_POST['email']) && !empty($_POST['email'])
+&& isset($_POST['password']) && !empty($_POST['password']))
+{
+
+$name = $_POST['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+
+
+$query = "INSERT INTO test (`name`,`email`,`password`)
+VALUES('$name','$email','$password')" ;
+  
+  $result = mysqli_query($connection , $query);
+  if($result){
+     echo json_encode(['message=> the data inserted successfully']); 
+  }
+  }
+else{
+      echo json_encode(['message=> you must send data']); 
+}
+
+}
+
+else{
+    echo json_encode(['message=> the method should be POST']);
+}
+
+
+
+
+
+
+
+---------------------put patch post
+
+                     update 
+
+
+<?php
+require('dbc.php');
+if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+$data = json_decode(file_get_contents("php://input"), true);
+
+  if(isset($data['first_name']) && !empty($data['first_name'])
+  && isset($data['last_name']) && !empty($data['last_name'])
+&& isset($data['email']) && !empty($data['email'])
+&& isset($data['gender']) && !empty($data['gender'])
+&& isset($data['money']) && !empty($data['money'])
+&& isset($data['city']) && !empty($data['city'])
+&& isset($data['country']) && !empty($data['country'])
+&& isset($data['country_code']) && !empty($data['country_code']))
+{
+
+$first_name = $data['first_name'];
+$last_name = $data['last_name'];
+$email = $data['email'];
+$gender = $data['gender'];
+$money = $data['money'];
+$city = $data['city'];
+$country = $data['country'];
+$country_code = $data['country_code'];
+
+$id = $_GET['id'];
+
+$query = "UPDATE  customers SET
+ `first_name`='$first_name',
+ `last_name`='$last_name',
+ `email` ='$email',
+ `gender`='$gender',
+ `money` ='$money',
+ `city` ='$city',
+ `country` ='$country'
+ ,`country_code`='$country_code'
+ WHERE id = $id ";
+  
+  $result = mysqli_query($connection , $query);
+  if($result){
+     echo json_encode(['message=> the data updated successfully']); 
+  }
+  }
+else{
+      echo json_encode(['message=> you must send data']); 
+}
+
+
+}
+
+else{
+    echo json_encode(['message=> the method should be POST']);
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+-------------------oop-----------------------------
+
+1-Encapsulation
+2-Inheritens
+3-polmarphetem
+4-apstraction
+
+
+
+----------trait----
+---inheritace
+
+
+
+
