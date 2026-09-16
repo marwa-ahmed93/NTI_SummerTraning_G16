@@ -633,19 +633,86 @@
 
 
 
-require 'Admin/User.php' ;
-require 'Customer/User.php' ;
+// require 'Admin/User.php' ;
+// require 'Customer/User.php' ;
 
-use Admin\User ;
-use Customer\User  as customer;
+// use Admin\User ;
+// use Customer\User  as customer;
 
-$a = new User() ;
-$a->user(); 
+// $a = new User() ;
+// $a->user(); 
 
-echo "<hr>";
+// echo "<hr>";
 
- $c =  new customer() ;
- $c->User();
+//  $c =  new customer() ;
+//  $c->User();
 
 // class User{}
 // class User{}
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////  Connection database   /////////////////////////////////////////////////////
+
+///-------------------1-----------
+ 
+// $connection =  mysqli_connect('localhost','root' , '','nti_online_g16') ;
+
+// $query = "SELECT * FROM `customers`" ;
+
+// $result =  mysqli_query($connection , $query) ;
+
+// $data =  mysqli_fetch_all($result , MYSQLI_ASSOC) ;
+
+// echo "<pre>" ;
+// print_r($data);
+
+
+////---------2-------
+
+// $connection  = new mysqli('localhost','root' , '','nti_online_g16') ;
+
+// $query = "SELECT * FROM `customers`" ;
+
+// $result =  $connection->query($query) ;
+
+// $data =  $result->fetch_all(MYSQLI_ASSOC) ;
+
+// echo "<pre>" ;
+// print_r($data);
+
+
+////------------3------------------
+/*****************************  PDO =>   php data object  **************************************************** */
+//// ----------  select   ----------------
+
+// $connection = new PDO("mysql:host=localhost;dbname=nti_online_g16", "root" ,'');
+
+// $query = "SELECT * FROM `customers`" ;
+
+// $result =   $connection->query($query) ;
+
+// $data = $result->fetchAll(PDO::FETCH_ASSOC);
+
+// echo "<pre>" ;
+// print_r($data);
+
+
+//---insert --------
+
+//  $dsn = new PDO(dsn:"mysql:host=localhost;dbname=nti_online_g16",username: "root" ,password:'');
+
+//  $query = "INSERT INTO departments(`name`) VALUES(:name)" ;
+
+// $result =  $dsn->prepare($query);  // 1
+
+// $departName = "Frontend" ;
+//  $result->bindParam(':name' , $departName );
+// $result->execute();
+// $result->execute(['name'=> $departName]);   //1
